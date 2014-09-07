@@ -1,0 +1,12 @@
+================ Revision history ============================================
+3.20.5:
+- Fixed bug in hardfault example for gnu gcc compilers.
+- Increased SPI baudrate in microsd driver by taking advantage of USART
+  SMSDELAY (see ref. man for further description).
+- Added new USB composite device example project.
+
+3.20.2:
+- Added FreeRTOS blink demo
+
+3.20.0:
+- Initial revision.

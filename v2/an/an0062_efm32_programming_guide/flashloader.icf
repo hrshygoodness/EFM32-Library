@@ -1,0 +1,13 @@
+define memory mem with size = 4G;
+define region RAM_region    = mem:[from 0x20000000 to 0x200007FF];
+
+define block CSTACK    with alignment = 8, size = 0xA0   { };
+
+do not initialize  { section .noinit };
+do not initialize  { readwrite };
+
+place at address mem:0x20000000 { readonly section .intvec };
+
+place in RAM_region    { readonly };
+place in RAM_region    { readwrite, block CSTACK };
+place in RAM_region    { last section buffer};

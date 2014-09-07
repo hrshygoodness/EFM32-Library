@@ -1,0 +1,87 @@
+==== 0v9p14 =================================================================
+
+ * Improved support for EFM32WG-DK3850
+
+Known issues;
+
+ * Trace MCU and Trace OUT does not work with this version of the FPGA firmware.
+   Using an external trace adapter and Trace IN works.
+ * Occasional initialization failure during firmware boot.
+   WORKAROUND; Cycle power on the kit by pressing the ON/OFF button.
+
+
+==== 0v9p12 =================================================================
+
+ * Added support for EFM32WG-DK3850
+ * Improvements to the GUI
+
+Added features;
+
+ * Timeout before AEM calibration on VMCU change - allows faster change of VMCU
+ * Displaying more information in several GUI screens
+ * New font in the GUI
+
+Addressed issues;
+
+ * Debug LED didn't work as expected
+
+Known issues;
+
+ * Trace MCU and Trace OUT does not work with this version of the FPGA firmware.
+ * Occasional initialization failure during firmware boot.
+   WORKAROUND; Cycle power on the kit by pressing the ON/OFF button.
+
+
+==== 0v9p10 =================================================================
+
+Added features;
+
+ * Added support for J-Link serial number addressing scheme
+
+Addressed issues;
+
+ * Occasional reliability issues with the board EEPROM.
+ * Minor bugfixes and improvements.
+
+Known issues;
+
+ * Trace MCU and Trace OUT does not work with this version of the FPGA firmware.
+ * Occasional initialization failure during firmware boot.
+   WORKAROUND; Reset kit by pressing the RESET pushbutton.
+
+==== 0v9p8 =================================================================
+
+ * Addded support for DK3550.
+
+
+==== 0v9p7 =================================================================
+
+Added features;
+
+ * Added support for High-Speed AEM. 6250 Hz current sample rate. Refer to kit user manual for more info.
+ * Added feature that allows the user to turn VMCU on/off. Will also turn off debug mode and analog peripheral switches.
+ * Added feature that makes energyAware Commander changes to the debug mode persistent.
+ * Added on-screen error display for kit failures
+
+Addressed issues;
+
+ * Fixed issue that caused SWO output to fail.
+ * Fixed issue that caused kit device erase functionality to frequently fail on Giant and Leopard devices.
+ * Improved MCU reset handling under kit boot. MCU reset is now asserted when firmware starts, and released at the end of the firmware boot sequence.
+ * Fixed missing MCU reset after on-board flash programming.
+ * Fixed issue with on-board debugger when using CrossWorks from Rowley.
+ * Only blink binary is now included as on-board binary example
+
+Known issues;
+
+ * Occasional initialization failure during firmware boot. WORKAROUND; Reset kit by pressing the RESET pushbutton.
+
+
+==== 0v9p5 =================================================================
+
+ * Added support for Leopard Gecko, EFM32LG-DK3650.
+
+
+==== 0v9p4 =================================================================
+
+ * Initial release

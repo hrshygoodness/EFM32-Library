@@ -1,0 +1,36 @@
+==== 1v6p0 =================================================================
+ * Added persistent debug mode after reboot.
+ 
+   NOTE:
+    When you upgrade to this firmware version the debug mode may be set
+    to "IN". You may need to change this to your preference in energAware
+    Commander.
+    
+ * Added support for J-Link serial number addressing
+ * Added support for unlocking Giant Gecko and Leopard Gecko devices
+ * Supporting G8XX-STK
+
+==== 1v5p0 =================================================================
+ * Added support for STK3300
+ 
+==== 1v3p0 =================================================================
+ * Updated j-link code base.
+ * Minor enhancements and bug fixes.
+
+==== 1v2p0 =================================================================
+ * Onboard J-Link now support GBD.
+ * Code cleanup.
+ * EFM32 reset/startup sequence cleanup. The MCU is now held in reset until it is ready to be released.
+ * Misc. improvements to control of debug interface in relation to AEM measurements.
+ * Improvements in AEM self-calibration routines.
+ * Hardware report is now correct.
+ * Fixed incorrect AEM measurement data. Previous version reported 1.65uA 
+   higher values than the correct ones due to missing compensation for 
+   a voltage divider network.
+
+==== 1v1p0 =================================================================
+ * Improved AEM calibration and measurement.
+ * Enabled debug out. Note that debug out will only work on EFM32 devices.
+
+==== 1v0p0 =================================================================
+ * Initial version.
