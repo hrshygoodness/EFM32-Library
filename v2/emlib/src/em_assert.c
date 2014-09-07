@@ -29,9 +29,8 @@
  * arising from your use of this Software.
  *
  ******************************************************************************/
-
-
 #include "em_assert.h"
+#include "termio.h"
 
 #if defined(DEBUG_EFM)
 
@@ -66,4 +65,11 @@ void assertEFM(const char *file, int line)
     ;
 }
 
+void assertUserEFM( const char *file, const char *func, int line)
+{
+  printf("Assertion failed: function %s, file %s, line %d\n", func, file, line);
+  
+  while (1)
+    ;
+}
 #endif /* DEBUG_EFM */

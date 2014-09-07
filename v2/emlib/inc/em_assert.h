@@ -63,7 +63,10 @@ extern "C" {
 /* Due to footprint considerations, we only pass file name and line number, */
 /* not the assert expression (nor function name (C99)) */
 void assertEFM(const char *file, int line);
-#define EFM_ASSERT(expr)    ((expr) ? ((void)0) : assertEFM(__FILE__, __LINE__))
+void assertUserEFM(const char *file, const char *func, int line);
+//#define EFM_ASSERT(expr)    ((expr) ? ((void)0) : assertEFM(__FILE__, __LINE__))
+#define EFM_ASSERT(expr)    ((expr) ? ((void)0) : \
+                                    assertUserEFM(__FILE__, __func__, __LINE__))
 
 #else
 
