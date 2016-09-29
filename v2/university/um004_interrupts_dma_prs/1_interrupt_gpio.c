@@ -71,7 +71,7 @@ void GPIO_IRQHandler(void)
 
   if (enableLed)
   {
-    /* Turn off LED */
+    /* Turn on LED */
     GPIO_PinOutSet(LED_PORT, LED_PIN);
   }
   else
