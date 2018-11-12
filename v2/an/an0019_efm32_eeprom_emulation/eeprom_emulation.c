@@ -458,7 +458,7 @@ bool EE_Init(uint32_t numberOfPages)
     /* Set current receiving page as active. */
     activePageNumber    = receivingPageNumber;
     receivingPageNumber = -1;
-    EE_setPageStatusActive(&pages[receivingPageNumber]);
+    EE_setPageStatusActive(&pages[activePageNumber]);
   }
   /* Found exactly one active and one receiving page. */
   else
